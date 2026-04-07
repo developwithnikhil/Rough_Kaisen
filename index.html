@@ -1142,6 +1142,8 @@
       // HEAD GROUP — +Z is forward (eyes at +Z side)
       const hG = new THREE.Group(); hG.position.y = 2.66; gP.HG = hG;
       hG.rotation.y = Math.PI;
+      head.rotation.x = 0;       // Z/Y up mismatch fix
+      head.rotation.z = 0;
       const head = new THREE.Mesh(new THREE.SphereGeometry(.43, 12, 9), skin); head.scale.set(1, 1.08, 1); hG.add(head);
       // Eyes at +Z
       const eyeM = new THREE.MeshBasicMaterial({ color: 0x111111 });
